@@ -34,20 +34,20 @@ function custom_post_type_project()
 		'remove_featured_image'		=> 'Remove Featured Image',
 		'use_featured_image'		=> 'Use Featured Image',
 		),
-		'supports'				=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes', 'post-formats',),
-		'menu_icon'				=> 'dashicons-index-card',
-		'capability_type'			=> 'post',
-		'public'				=> true,
-		'show_ui'				=> true,
-		'show_in_menu'				=> true,
-		'show_in_admin_bar'			=> true,
-		'show_in_nav_menus'			=> true,
-		'menu_position'				=> 20,
-		'has_archive'				=> true,
-		'hierarchical'				=> false,
-		'publicly_querable'			=> true,
-		'taxonomies'				=> array('photography'),
-		'rewrite' 				=> array('slug' => 'all-projects')
+		'supports'			=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes', 'post-formats',),
+		'menu_icon'			=> 'dashicons-index-card',
+		'capability_type'		=> 'post',
+		'public'			=> true,
+		'show_ui'			=> true,
+		'show_in_menu'			=> true,
+		'show_in_admin_bar'		=> true,
+		'show_in_nav_menus'		=> true,
+		'menu_position'			=> 20,
+		'has_archive'			=> true,
+		'hierarchical'			=> false,
+		'publicly_querable'		=> true,
+		'taxonomies'			=> array('photography'),
+		'rewrite' 			=> array('slug' => 'all-projects')
 	));
 }
 add_action('init', 'custom_post_type_project');
@@ -56,7 +56,7 @@ add_action('init', 'custom_post_type_project');
 function custom_taxonomy_projects()
 {
 	register_taxonomy('photography', 'projects', array(
-		'labels'				=> array(
+		'labels'			=> array(
 		'name'				=> 'Photography',
 		'menu_name'			=> 'Photography',
 		'singular_name'			=> 'Photograph',
@@ -74,14 +74,14 @@ function custom_taxonomy_projects()
 		'not_found'			=> 'Categories Not Found',
 		'not_found_in_trash'		=> 'Categories Not Found In Trash',
 		),
-		'hierarchical'				=> true,
-		'show_ui'				=> true,
-		'show_admin_column'			=> true,
-		'update_count_callback'			=> '_update_post_term_count',
-		'query_var'				=> true,
-		'public'				=> false, // doesn't display front-end
-		'args'					=> array('orderby'	=> 'term_order'),
-		'rewrite'				=> array('slug' => 'Photography'),
+		'hierarchical'			=> true,
+		'show_ui'			=> true,
+		'show_admin_column'		=> true,
+		'update_count_callback'		=> '_update_post_term_count',
+		'query_var'			=> true,
+		'public'			=> false, // doesn't display front-end
+		'args'				=> array('orderby'	=> 'term_order'),
+		'rewrite'			=> array('slug' => 'Photography'),
 	));
 }
 add_action('init', 'custom_taxonomy_projects');
