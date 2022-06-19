@@ -1,6 +1,6 @@
 # Celia
 
-A custom poerfolio WordPress website
+A custom portfolio WordPress website
 
 Features an artist portfolio showcasing their art in various mediums.
 
